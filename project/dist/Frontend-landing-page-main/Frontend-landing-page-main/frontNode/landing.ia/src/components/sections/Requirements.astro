@@ -1,0 +1,30 @@
+---
+const requirements = [
+ {
+   title: "Actitud Positiva hacia la Tecnología",
+   description: "No necesitas ser un experto en computación, solo tener ganas de aprender algo nuevo que hará tu trabajo más fácil."
+ },
+ {
+   title: "Habilidades Básicas en Computación",
+   description: "Saber usar herramientas como correo electrónico, Word o Excel es suficiente."
+ },
+ {
+   title: "Tiempo para Aprender",
+   description: "Pasión por el aprendizaje, dedicación de 4 horas y disposición para resolver problemas."
+ }
+];
+---
+
+<section class="py-20 bg-gradient-to-b from-[#151933] via-purple-900/20 to-[#151933]">
+ <div class="container mx-auto px-4">
+   <h2 class="text-3xl font-bold text-center mb-12 text-white">Requisitos Previos</h2>
+   <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+     {requirements.map(req => (
+       <div class="bg-[#151933] border border-purple-500/20 rounded-xl p-6 hover:border-purple-500/40 transition-all">
+         <h3 class="text-xl font-semibold mb-3 text-purple-400">{req.title}</h3>
+         <p class="text-white/70">{req.description}</p>
+       </div>
+     ))}
+   </div>
+ </div>
+</section>
